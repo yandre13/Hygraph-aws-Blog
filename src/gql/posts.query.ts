@@ -7,6 +7,7 @@ export const queryPosts = gql`
       title
       description
       slug
+      stage
       image {
         fileName
         url
@@ -47,6 +48,7 @@ export const queryPostBySlug = gql`
       title
       description
       slug
+      stage
       image {
         fileName
         url
@@ -78,6 +80,7 @@ export type Post = {
   title: string
   description: string
   slug: string
+  stage: string
   image: Image
   author: Author
   createdAt: string

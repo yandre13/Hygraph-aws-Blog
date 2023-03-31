@@ -51,7 +51,9 @@ export default function Post({ post }: { post: DataPost['post'] }) {
           className="aspect-[2.3] rounded-lg shadow-2xl"
         />
         <div>
-          <h1 className="text-5xl font-bold leading-tight">{post.title}</h1>
+          <h1 className="text-5xl font-bold leading-tight">
+            {post.title} {post.stage}
+          </h1>
           <p className="py-6">{post.description}</p>
           <button className="btn-primary btn">Get Started</button>
         </div>

@@ -8,11 +8,12 @@ export default function Card({
   description,
   image,
   slug,
+  stage,
   author,
   createdAt,
 }: Post) {
   return (
-    <div className="card w-full bg-base-100 shadow-xl">
+    <div className="card mx-auto w-[400px] bg-base-100 shadow-xl md:w-full">
       <Link href={`/posts/${slug}`}>
         <figure>
           <Image
@@ -27,7 +28,8 @@ export default function Card({
 
       <div className="card-body">
         <p className="mb-2 text-sm">
-          <span className="font-bold">Product •</span> {formatDate(createdAt)}
+          <span className="font-bold">{stage} Product •</span>{' '}
+          {formatDate(createdAt)}
         </p>
         <Link href={`/posts/${slug}`}>
           <h2 className="card-title font-black duration-300 ease-in-out hover:text-[#7928CA]">
